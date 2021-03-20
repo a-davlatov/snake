@@ -2,11 +2,8 @@
 var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 
-console.log(window.innerWidth);
 const wrapper = document.getElementById("wrapper");
-if (window.innerWidth <= 768) {
-	console.log('mobile');
-
+if (window.innerWidth <= 1080) {
 	wrapper.style.width = window.innerWidth + 'px';
 	wrapper.style.height = window.innerHeight + 'px';
 	canvas.width = window.innerWidth;

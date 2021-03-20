@@ -12,7 +12,7 @@ body {
 	margin-top: 85px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1080px) {
 	.wrapper {
 		margin: 0;
 		max-width: none;
