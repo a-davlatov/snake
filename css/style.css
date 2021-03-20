@@ -1,12 +1,20 @@
 body {
+	margin: 0;
 	background-color: #333;
 }
 
-div {
+.wrapper {
 	width: 100%;
 	max-width: 500px;
 	height: 500px;
-	margin: 0 auto;
+	margin: 85px auto 0;
 	background-color: #fff;
 	margin-top: 85px;
+}
+
+@media (max-width: 768px) {
+	.wrapper {
+		margin: 0;
+		max-width: none;
+	}
 }

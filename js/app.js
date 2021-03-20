@@ -2,14 +2,25 @@
 var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 
+console.log(window.innerWidth);
+const wrapper = document.getElementById("wrapper");
+if (window.innerWidth <= 768) {
+	console.log('mobile');
+
+	wrapper.style.width = window.innerWidth + 'px';
+	wrapper.style.height = window.innerHeight + 'px';
+	canvas.width = window.innerWidth;
+	canvas.height = window.innerHeight;
+}
+
 // Получаем ширину и высоту элемента canvas
 var width = canvas.width;
 var height = canvas.height;
 
 // Вычесляем ширину и высоту в ячейках
 var blockSize = 10;
-var widthInBlocks = width / blockSize;
-var heightInBlocks = height / blockSize;
+var widthInBlocks = Math.floor( width / blockSize );
+var heightInBlocks = Math.floor( height / blockSize );
 
 // Устанавливаем счет в 0
 var score = 0;
@@ -41,7 +52,7 @@ var gameOver = function () {
 	ctx.fillText("Game Over", width / 2, height / 2);
 };
 
-// Рисуем окружность (используя функцию из главы 14)
+// Рисуем окружность
 var circle = function (x, y, radius, fillCircle) {
 	ctx.beginPath();
 	ctx.arc(x, y, radius, 0, Math.PI * 2, false);
@@ -231,6 +242,8 @@ $("body").keydown(function (event) {
 		snake.setDirections(newDirection);
 	}
 });
+
+// Обрабатываем тач-события для работы на мобильных приложениях
 $('#canvas').swipe( {
     swipeStatus:function(event, phase, direction, distance, duration, fingerCount, fingerData, currentDirection)
     {
