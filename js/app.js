@@ -4,12 +4,9 @@ canvas.width = 1280;
 canvas.height = 620;
 const ctx = canvas.getContext("2d");
 
-let blockSize = 20;
-
-if (window.innerWidth <= 1080) {
+if (window.innerWidth <= 1024) {
 	canvas.width = window.innerWidth;
 	canvas.height = window.innerHeight;
-	blockSize = 10;
 }
 
 // Получаем ширину и высоту элемента canvas
@@ -17,6 +14,7 @@ const width = canvas.width;
 const height = canvas.height;
 
 // Вычесляем ширину и высоту в ячейках
+let blockSize = 20;
 const widthInBlocks = Math.floor( width / blockSize );
 const heightInBlocks = Math.floor( height / blockSize );
 

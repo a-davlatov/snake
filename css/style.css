@@ -14,11 +14,6 @@ body {
 
 .canvas {
 	background: #000;
-}
-
-@media (max-width: 1080px) {
-	.wrapper {
-		margin: 0;
-		max-width: none;
-	}
+	display: block;
+	margin: 0 auto;
 }
