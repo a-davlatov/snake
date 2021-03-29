@@ -170,8 +170,7 @@ Snake.prototype.move = function () {
 	this.segments.pop();
 };
 
-// Проверяем, не столкнулась ли змейка со стеной или с собственным
-// телом
+// Проверяем, не столкнулась ли змейка со стеной или с собственным телом
 Snake.prototype.selfCollision = function (head) {
 	let selfCollision = false;
 
@@ -183,8 +182,7 @@ Snake.prototype.selfCollision = function (head) {
 	return selfCollision;
 };
 
-// Задаем следующее направление движения змейки на основе нажатой
-// клавиши
+// Задаем следующее направление движения змейки на основе нажатой клавиши
 Snake.prototype.setDirections = function (newDirection) {
 	if (this.direction === "up" && newDirection === "down") {
 		return;
@@ -200,7 +198,7 @@ Snake.prototype.setDirections = function (newDirection) {
 
 // Задаем конструктор Apple (яблоко)
 const Apple = function () {
-	this.position = new Block(blockSize, blockSize);
+	this.position = new Block(10, 10);
 };
 
 // Рисуем кружок в позиции яблока
