@@ -1,5 +1,7 @@
 // Настройка <<холста>>
 const canvas = document.getElementById("canvas");
+canvas.width = 1280;
+canvas.height = 620;
 const ctx = canvas.getContext("2d");
 
 let blockSize = 20;
@@ -7,7 +9,6 @@ let blockSize = 20;
 if (window.innerWidth <= 1080) {
 	canvas.width = window.innerWidth;
 	canvas.height = window.innerHeight;
-	blockSize = 40;
 }
 
 // Получаем ширину и высоту элемента canvas
