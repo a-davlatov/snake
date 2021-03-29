@@ -1,15 +1,19 @@
 body {
 	margin: 0;
+	padding: 0;
 	background-color: #333;
 }
 
 .wrapper {
 	width: 100%;
-	max-width: 500px;
-	height: 500px;
-	margin: 85px auto 0;
-	background-color: #fff;
-	margin-top: 85px;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.canvas {
+	background: #000;
 }
 
 @media (max-width: 1080px) {
