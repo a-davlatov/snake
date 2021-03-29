@@ -9,6 +9,7 @@ let blockSize = 20;
 if (window.innerWidth <= 1080) {
 	canvas.width = window.innerWidth;
 	canvas.height = window.innerHeight;
+	blockSize = 10;
 }
 
 // Получаем ширину и высоту элемента canvas
